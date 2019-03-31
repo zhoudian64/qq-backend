@@ -15,7 +15,7 @@ def rsa_encrypt_numbers(data:hug.types.number,
         # f**k U
         pass
     hashed_numbers = private_key.encrypt(data)
-    return hashed_numbers
+    return str(hashed_numbers)
 
 
 @hug.post()
@@ -32,4 +32,4 @@ def rsa_decrypt_numbers(data:hug.types.number,
         # f**k U
         pass
     de_data = public_key.decrypt(data)
-    return de_data
+    return str(de_data)
