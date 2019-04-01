@@ -1,6 +1,5 @@
 def gcd(a, b):
     """
-    欧几里得 最大公约数
     Greatest Common Divisor
     """
     return a if b == 0 else gcd(a, b)

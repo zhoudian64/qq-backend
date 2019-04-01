@@ -3,12 +3,12 @@ from .montgomery import exp_mode
 
 big_prime = 3889
 
-"""
-密钥格式
-"""
-
 
 class RSAKey:
+    """
+    密钥格式
+    """
+
     def __init__(self, n, component):
         self.component = component
         self.n = n
@@ -24,12 +24,10 @@ class RSAPrivateKey(RSAKey):
         return exp_mode(data, self.component, self.n)
 
 
-"""
-生成rsa密钥对
-"""
-
-
 def generate_key(prime_1, prime_2):
+    """
+    生成rsa密钥对
+    """
     big_int = prime_1 * prime_2
     # 公开的 难以分解
     phi = (prime_1 - 1) * (prime_2 - 1)

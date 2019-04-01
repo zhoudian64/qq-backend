@@ -1,9 +1,7 @@
-"""
-Montgomery for (base ^ exponent) mod n
-"""
-
-
 def exp_mode(base, exponent, n):
+    """
+    Montgomery for (base ^ exponent) mod n
+    """
     bin_exponent = bin(exponent)[2:][::-1]
     bit = len(bin_exponent)
     base_array = [base]
